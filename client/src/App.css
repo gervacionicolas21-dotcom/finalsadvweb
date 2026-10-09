@@ -1,0 +1,174 @@
+.page-shell {
+  --ink: #f1f5fb;
+  --muted: #9aa8bc;
+  --line: #384252;
+  --blue: #cbd5e1;
+  width: min(100% - 32px, 900px);
+  margin: 0 auto;
+  padding: 28px 0;
+}
+
+.page-header {
+  margin-bottom: 22px;
+}
+
+.page-header h1 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(27px, 4vw, 36px);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.panel {
+  min-width: 0;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.panel-heading h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 21px;
+}
+
+.student-form label {
+  display: block;
+  margin: 14px 0 7px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.student-form input {
+  box-sizing:border-box;
+  width:100%;
+  height:42px;
+  padding:0 10px;
+  border: 1px solid var(--line);
+  border-radius:4px;
+  outline:none;
+  color: var(--ink);
+  background:transparent;
+  font:inherit;
+}
+
+.student-form input:focus {
+  border-color: #9ca3af;
+}
+
+.student-form input::placeholder,
+.student-details p,
+.student-count,
+.empty-state {
+  color: var(--muted);
+}
+
+.form-actions,
+.student-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.form-actions {
+  margin-top: 18px;
+}
+
+.primary-button,
+.text-button,
+.delete-button {
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.primary-button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 4px;
+  color: #0c111a;
+  background: #d1d5db;
+}
+
+.primary-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.text-button,
+.delete-button {
+  padding: 6px 0;
+  border: 0;
+  background: transparent;
+}
+
+.text-button {
+  color: #e5e7eb;
+}
+
+.delete-button,
+.error-message {
+  color: #f87171;
+}
+
+.error-message {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.empty-state {
+  font-size: 13px;
+}
+
+.student-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.student-card {
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+.student-details {
+  min-width: 0;
+  flex: 1;
+}
+
+.student-details h3 {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.student-details p {
+  margin: 4px 0 0;
+  font-size: 12px;
+}
+
+.student-details p span {
+  padding: 0 4px;
+}
+
+@media (max-width: 640px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
